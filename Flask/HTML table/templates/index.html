@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <table border="2px">
+        <thead>
+            <td>First_Name</td>
+            <td>Last_Name</td>
+            <td>Full_Name</td>
+        </thead>
+        {% for elem in list: %}
+        <tr>
+            <td>{{elem.first_name}}</td>
+            <td>{{elem.last_name}}</td>
+            <td>{{elem.first_name}} {{elem.last_name}}</td>
+        </tr>
+        {%endfor%}
+
+    <script src="{{url_for('static',filename='myscript.js')}}"></script>
+</body>
+</html>
